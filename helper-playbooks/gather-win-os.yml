@@ -1,0 +1,10 @@
+---
+# Play - download rollout
+- name: Gather os info
+  hosts: all
+  tasks:
+  - name: Display detailed OS facts
+    debug:
+      msg: "OS: {{ ansible_distribution }}, Version: {{ ansible_distribution_version }}, Major Version: {{ ansible_distribution_major_version }}"
+  - name: run win_ping
+    win_ping:
