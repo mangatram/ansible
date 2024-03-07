@@ -3,7 +3,7 @@ name: _deploy_suites
 on:
   workflow_run:
     workflows: ["workflow1"]
-    branches: ["branch-02"]
+    branches: [ main,  branch-02]
     types:
       - completed
   workflow_dispatch:
