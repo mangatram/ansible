@@ -1,0 +1,21 @@
+name: _deploy_suites
+
+on:
+  workflow_run:
+    workflows: ["workflow1"]
+    types:
+      - completed
+  workflow_dispatch:
+
+permissions:
+  id-token: write
+  contents: read
+  actions: read
+  pull-requests: write
+
+jobs:
+    hello_world_job:
+        runs-on: ubuntu-latest
+        steps:
+        -   name: Print Hello World
+            run: echo "Hello World"
