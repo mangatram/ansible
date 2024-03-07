@@ -2,7 +2,7 @@ name: _deploy_suites
 
 on:
   workflow_run:
-    workflows: ["workflow1.yaml"]
+    workflows: ["workflow1"]
     types:
       - completed
   workflow_dispatch:
