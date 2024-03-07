@@ -2,8 +2,7 @@ name: workflow1
 
 on:
   push:
-    branches: [ main,  branch-02]
-
+    branches: [ main,branch-04]
 jobs:
   hello_world_job:
     runs-on: ubuntu-latest
